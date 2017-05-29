@@ -21,11 +21,22 @@
         font: 24px bold;
         font-family: 'Josefin Sans', sans-serif;
       }
+      .logos {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+      }
+      #logoContainer {
+        margin-top: 20%;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
+      <div class="col-md-1"></div>
 
+      <!-- CONTENT -->
+      <div class="col-md-10">
         <div class="row">
           <div class="col-md-4">
             <h1>Pavel Slepiankou</h1>
@@ -39,10 +50,11 @@
         <div class="row">
           <div class="col-md-12">
             <p>
-            I'm a software developer from Minsk, Belarus. I'm mostly specified on Salesforce.com and web development. I have 8+ years of commercial software development experience. 
-            And past 5 years I work with Salesforce.com/Force.com as a primary platform for me. During this period I played developer, key developer, development team lead and system architect roles.
+            I'm a software developer from Minsk, Belarus. I'm mostly specified on Salesforce.com and web development. I have 8+ years of professional software development experience. 
+            And past 5 years I've been working with Salesforce.com/Force.com as a primary platform for me. 
+            During this period I played developer, key developer, development team lead and solution architect roles.
             
-            Also I have an experience with mobile app, development applications and scripts with another programming language - mostly with Java and Python</p>
+            Also I have an experience on mobile app development and application development on another programming language - mostly with Java, Python and Javascript</p>
 
             <p>Currently I work for Targetprocess as a Salesforce.com developer where I improve an internal sales processes and develop a full cycle Quote-to-Cash application.</p>
           </div>
@@ -60,14 +72,15 @@
             <h4 class="company-name"><a href="https://targetprocess.com">Targetprocess</a></h4>
             <p>Nov. 2016 - Present</p>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <p>
               Targetprocess is a visual project management software solution that focuses on the agile software 
               development methodology with out-of-the-box support for Scrum, Kanban and SAFe. I work on improving sales and marketing processes.
               <ul>
-                <li>Developing custom Quote-to-Cash application for Sales department based on Lightning components</li>
+                <li>Developing custom Quote-to-Cash application for Sales department (Lightning components)</li>
                 <li>Integration with 3rd party applciation via REST API</li>
                 <li>Improving sales processes by integration of 3rd party application into sales process</li>
+                <li>Developing a predictive lead scoring system</li>
               </ul>
             </p>
             </div>
@@ -81,7 +94,7 @@
             <h4 class="company-name"><a href="https://epam.com">Epam Systems</a></h4>
             <p>Sept. 2011 - Nov. 2016</p>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <p>
               I started work at Epam as a developer and through a different roles like key developer/consultant/auditor I finished as a Lead 
               developer with roles of team leader and solution architect.
@@ -92,10 +105,11 @@
             <p>Also I was a trainer in Salesforce developer's Labs.</p>
             <ul>
               <li>Leading a team on migration Salesforce Community Cloud application developed on VisualForce to Lightning Component</li>
-              <li>Development and integrations of two customer relationship management application. Fully custom UI was designed for this application on force.com platform.</li>
-              <li>Development of wide range of applications for financial sector which were working in single salesforce organization.
-               Primary client business is micro-loan management and mortgage. 
-               The first phase of development was development a wizard-based application form for customer endpoints. The second phase was development of analysis and reporting system, fixing bugs and improvements existing functionality.</li>
+              <li>Development and integrations of two customer relationship management application. Fully custom UI was designed for this application on Force.com platform.</li>
+              <li>Design and development a wide range of applications for financial sector.
+               Primary client business was a micro-loan management and mortgage. Thus application required a complex credit scoring algorithms and wide set of integration via REST and SOAP with
+               external data providers.</li>
+              <li>Leading of sprint retrospective, customer demo</li>
               <li>Security/Architecture Audit</li>
             </ul>
             </div>
@@ -108,7 +122,7 @@
             <h4 class="company-name">BelWillesden</h4>
             <p>Nov. 2009 - Sept. 2011</p>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <p>BelWillesden is a company which manages a chain stores in Belarus. I worked as Lotus Domino developer. I was responsible for new application development and support.</p>
             <ul>
               <li>Integration of Lotus Domino Help Desk app with a monitoring system Nagios.</li>
@@ -126,9 +140,9 @@
             <h4 class="company-name">Armed Forces of Belarus</h4>
             <p>Mar. 2007 - Mar. 2009</p>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <p>
-              I worked as a System Administrator and telecommunication specialist.
+              I worked as a system administrator and telecommunication specialist.
               <ul>
                 <li>Manage computer networks</li>
                 <li>Configure Linux servers</li>
@@ -142,19 +156,21 @@
         <hr>
 
         <!-- SKILLS -->
+        <h2>KEY SKILLS</h2>
         <div class="row">
           <div class="col-md-3">
-            <h3>KEY SKILLS</h3>
+            
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <ul>
               <li>Full Stack Salesforce development (Apex/VisualForce/Lightning)</li>
               <li>Salesforce Administration</li>
-              <li>Pardot</li>
               <li>JavaScript (Lightning Framework, AngularJS)</li>
               <li>Python</li>
               <li>Continuous Integration (Jenkins/TeamCity  with Ant Migration tool/python scripting)</li>
               <li>HTML/CSS/Bootstrap/Lightning Design System</li>
+              <li>Pardot</li>
+              <li>ETL tools</li>
               <li>Outreach.io/ScheduleOnce</li>
             </ul>
           </div>
@@ -164,16 +180,36 @@
         <div class="row">
           <hr>
           <div class="col-md-3">
-            <h4>Certification</h4>
+            <h4>Education & Certification</h4>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <ul>
               <li>Certified Force.com Developer(Winter'13)</li>
               <li>Salesforce.com Certified Administrator (Spring'13)</li>
               <li><a href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU">Thrailhead Profile</a></li>
+              <li>Belarusian National Technical University (didn't complete full course of Software engineering specialization)</li>
             </ul>
           </div>
         </div>
+      </div>
+      
+      <!-- RIGTH LOGO SECTION -->
+      <div id="logoContainer" class="col-md-1">
+        <div class="row">
+          <a href="https://github.com/pavel-slepenkov"><img class="logos" src="assets/github-social-logo.svg" alt=""></a>  
+        </div>
+        <div class="row">
+          <a href="https://stackoverflow.com/users/798335/pavel-slepiankou"><img class="logos" src="assets/stack-exchange-symbol.svg" alt=""></a>  
+        </div>
+        <div class="row">
+          <a href="https://www.linkedin.com/in/pavel-slepiankou-76376b35"><img class="logos" src="assets/linkedin-logo-button.svg" alt=""></a>  
+        </div>
+        <div class="row">
+          <a href="https://www.facebook.com/pavel.slepiankou"><img class="logos" src="assets/facebook-logo-button.svg" alt=""></a>  
+        </div>
+
+        
+      </div>
     </div>
   </body>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

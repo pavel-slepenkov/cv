@@ -83,18 +83,54 @@
             top: 0;
         }
 
+        .heading-name {
+            writing-mode: tb-rl;
+            white-space: nowrap;
+        }
+
         .heading-on-print {
             display: none !important;
         }
 
-        @media (max-width:600px)  {
+        @media (max-width: 600px) {
             .heading {
                 display: none !important;
             }
+
             .section-heading {
                 background: #f5f7f9;
+                z-index: 5;
             }
 
+        }
+
+        @media (min-width: 601px) and (max-width: 800px) {
+            .heading {
+                z-index: 5;
+                height: 150px;
+                background: #e7f4f9;
+                width: 100%;
+                padding-top: 10px;
+            }
+
+            .section-heading {
+                /*background: #f5f7f9;*/
+                /*z-index:5;*/
+            }
+
+            .heading-name {
+                writing-mode: lr;
+            }
+
+            .profile-links {
+                float: left;
+            }
+        }
+
+        @media (min-width: 801px) and (max-width: 1200px) {
+            .content {
+                max-width: 50em;
+            }
         }
 
         @media print {
@@ -119,15 +155,33 @@
 
         gtag('config', 'UA-108892640-1');
     </script>
+    <script>
+        function onloadHandler() {
+            document.onkeydown = keyPress;
+        }
+
+        function keyPress(e) {
+            var evtObj = window.event ? event : e;
+            if ((evtObj.ctrlKey || evtObj.metaKey) && evtObj.keyCode === 80) {
+                console.log("Cool, you're decided to print my CV. Seems like we move our story to the next level");
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
 
 </head>
-<body>
+<body onload="onloadHandler();">
 
 <div class="heading no-print">
-    <div class="col-md-10">
+
+    <div class="col-md-1 heading-name">
         <h1><a href="https://pavelslepenkov.info">🤓 Pavel Slepiankou</a></h1>
+        <!--<h4>Software Engineer</h4>-->
     </div>
-    <div class="col-md-2">
+
+    <div class="col-md-10"></div>
+
+    <div class="col-md-1 profile-links">
         <a href="https://github.com/pavel-slepenkov">
             <img class="logos" src="assets/github-social-logo.svg" alt="">
         </a>
@@ -169,7 +223,8 @@
                     I have 9 years of professional software development experience and 11 years of overall IT
                     experience.
                     Since 2011 I've been working with Salesforce.com/Force.com as a primary platform.
-                    During this period I played developer, key developer, development team leader and solution architect roles in
+                    During this period I played developer, key developer, development team leader and solution architect
+                    roles in
                     different projects. But all this time I was a developer who writes code every single day.
                     I know limitation, patterns and anti-patterns of Force.com
                     platform. I believe that I made all possible mistakes and caught
@@ -326,8 +381,8 @@
         </div>
         <hr>
 
-         <!--SKILLS -->
-        <h2>🔥 SKILLS</h2>
+        <!--SKILLS -->
+        <h2 class="section-heading">🔥 SKILLS</h2>
         <div class="row">
             <div class="col-md-3">
             </div>
@@ -349,8 +404,8 @@
                     <li>HTML / CSS / Bootstrap / Lightning Design System</li>
                     <li>Pardot configuration</li>
                     <li>ETL tools (Dataloader / Pentaho DI )</li>
-                    <li>Outreach.io / ScheduleOnce</li>
-                    <li>Manage development team up to 15 members</li>
+                    <li>Outreach.io / ScheduleOnce / Google Analytics</li>
+                    <li>Development team management (up to 15 members)</li>
                 </ul>
             </div>
         </div>

@@ -24,11 +24,11 @@
             font-size: large;
             color: #566b78;
             margin: 0 auto;
-            max-width: 96%;
+            max-width: 100%;
             line-height: 1.5;
         }
 
-        .content {
+        .content-container {
             color: #566b78;
             margin: 0 auto;
             max-width: 60em;
@@ -61,35 +61,38 @@
         }
 
         .heading {
-            /*background: #ccc;*/
-            height: 50px;
+            background: #e4e4e4;
+            height: 75px;
             line-height: 50px;
-            /*margin-top: 10px;*/
             font-size: 30px;
             padding-left: 10px;
             position: -webkit-sticky;
             position: sticky;
             top: 0;
+            z-index: 5;
+        }
+        .heading-container {
+            max-width: 60em;
         }
 
         .section-heading {
-            /*height: 50px;*/
             line-height: 50px;
-            /*margin-top: 10px;*/
-            /*font-size: 30px;*/
             padding-left: 10px;
             position: -webkit-sticky;
             position: sticky;
-            top: 0;
+            top: 75px;
         }
 
         .heading-name {
-            writing-mode: tb-rl;
             white-space: nowrap;
         }
 
         .heading-on-print {
             display: none !important;
+        }
+        .profile-link {
+            float: right;
+            margin-left: 3px;
         }
 
         @media (max-width: 600px) {
@@ -100,22 +103,30 @@
             .section-heading {
                 background: #f5f7f9;
                 z-index: 5;
+                top: 0;
             }
-
         }
 
         @media (min-width: 601px) and (max-width: 800px) {
             .heading {
                 z-index: 5;
                 height: 150px;
-                background: #e7f4f9;
+                background: #e4e4e4;
                 width: 100%;
                 padding-top: 10px;
             }
 
             .section-heading {
-                /*background: #f5f7f9;*/
-                /*z-index:5;*/
+                background: #f1f9f6;
+                z-index:4;
+                top:150px;
+                margin-left: -50px;
+                margin-right: -50px;
+                text-align: center;
+                text-align: -webkit-center;
+            }
+            hr {
+                display: none;
             }
 
             .heading-name {
@@ -128,8 +139,14 @@
         }
 
         @media (min-width: 801px) and (max-width: 1200px) {
-            .content {
+            .content-container {
                 max-width: 50em;
+            }
+        }
+
+        @media (min-width: 2000px) {
+            .heading-container {
+                max-width: 100%;
             }
         }
 
@@ -171,34 +188,40 @@
 
 <div class="heading no-print">
 
-    <div class="col-md-1 heading-name">
-        <h1><a href="https://pavelslepenkov.info">🤓 Pavel Slepiankou</a></h1>
-        <!--<h4>Software Engineer</h4>-->
+    <div class="heading-container">
+        <div class="col-md-1 heading-name">
+            <h1><a href="https://pavelslepenkov.info">🤓 Pavel Slepiankou</a></h1>
+            <!--<h4>Software Engineer</h4>-->
+        </div>
+
+        <div class="col-md-7"></div>
+
+        <div class="col-md-4 profile-links">
+            <a class="profile-link" href="https://www.facebook.com/pavel.slepiankou">
+                <img class="logos" src="assets/facebook-logo-button.svg" alt="">
+            </a>
+            <a class="profile-link" href="https://www.linkedin.com/in/pavel-slepiankou-76376b35">
+                <img class="logos" src="assets/linkedin-logo-button.svg" alt="">
+            </a>
+            <a class="profile-link" href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU">
+                <img class="logos" src="assets/trailhead.svg" alt="">
+            </a>
+            <a class="profile-link" href="https://stackoverflow.com/users/798335/pavel-slepiankou">
+                <img class="logos" src="assets/stack-exchange-symbol.svg" alt="">
+            </a>
+            <a class="profile-link" href="https://github.com/pavel-slepenkov">
+                <img class="logos" src="assets/github-social-logo.svg" alt="">
+            </a>
+
+        </div>
     </div>
 
-    <div class="col-md-10"></div>
-
-    <div class="col-md-1 profile-links">
-        <a href="https://github.com/pavel-slepenkov">
-            <img class="logos" src="assets/github-social-logo.svg" alt="">
-        </a>
-        <a href="https://stackoverflow.com/users/798335/pavel-slepiankou">
-            <img class="logos" src="assets/stack-exchange-symbol.svg" alt="">
-        </a>
-        <a href="https://www.linkedin.com/in/pavel-slepiankou-76376b35">
-            <img class="logos" src="assets/linkedin-logo-button.svg" alt="">
-        </a>
-        <a href="https://www.facebook.com/pavel.slepiankou">
-            <img class="logos" src="assets/facebook-logo-button.svg" alt="">
-        </a>
-    </div>
 </div>
 
-<div class="container-fluid content">
-    <div class="col-md-1"></div>
+<div class="container-fluid content-container">
 
     <!-- CONTENT -->
-    <div class="col-md-10">
+    <div class="col-md-12">
         <div class="row">
             <div class="col-md-4">
                 <div class="heading-on-print">
@@ -221,15 +244,14 @@
                     experience.
                     Since 2011 I've been working with Salesforce.com/Force.com as a primary platform.
                     During this period I played developer, key developer, development team leader and solution architect
-                    roles in
-                    different projects. But all this time I was a developer who writes code every single day.
+                    roles in different projects. But all this time I was a developer who writes code every single day.
                     I know limitation, patterns and anti-patterns of Force.com
                     platform. I believe that I made all possible mistakes and caught
                     all possible exceptions on the platform but I still love it.
                 </p>
                 <p>
                     Despite my primary specialization I also have an experience with application development on other
-                    programming language & frameworks - mostly with Java, Python and Javascript.
+                    programming language & frameworks, mostly with Java, Python and Javascript.
                     I also an active member of StackOverflow/StackExchange community where I answer a
                     programming related questions and help beginners and whoever who needs a help.
                 </p>
@@ -281,33 +303,26 @@
             </div>
             <div class="col-md-8">
                 <p>
-                    I started work at Epam as a developer and through a different roles like key
-                    developer/consultant/auditor I finished as a Lead
-                    developer with roles of team leader and solution architect.
+                    I started work at Epam Systems as a developer and through a different roles like key
+                    developer/consultant/auditor I finished as a lead developer with roles of team leader and solution architect.
                     I completed ~10 projects for different Epam's customers inculding Coca-Cola, Merk/MSD.
-                    By these projects
-                    I gained a solid experience with Sales, Service and Community Clouds and other Salesforce releted
-                    technologies.
+                    By these projects I gained a solid experience with Sales, Service and Community Clouds as well as other Salesforce related technologies.
                 </p>
                 <p>Also I was a trainer in Salesforce developer's Labs and a leader of local Salesforce developers
                     community</p>
                 <ul>
-                    <li>Managed team on migration VisualForce Salesforce Community Cloud application to Lightning
-                        Component
-                    </li>
+                    <li>Managed team on migration VisualForce Salesforce Community Cloud application to Lightning Component</li>
                     <li>Worked on application which required a complex credit scoring algorithms and wide set of
                         integration via REST and SOAP with
                         external credit scoring data providers.
                     </li>
+                    <li>Performed a security/architecture audit and code reviews for parallel stream projects</li>
                     <li>Experience with Agile methodologies, leading of sprint planning, retrospective, demos</li>
+                    <li>Organized meetups for Salesforce developers, was a speaker on these meetups</li>
                     <li>Once I saw and refactored Salesforce org with 95% of used apex code limit. The team which
                         developed it before knew nothing about version control ¯\_(ツ)_/¯
                     </li>
-                    <li>Performed a security/architecture audit and code reviews for parallel stream projects</li>
-                    <li>Organized meetups for Salesforce developers, was a speaker on these meetups</li>
-                    <li>Played role of build engineer, provided expertise in CI and deployment practice for other
-                        teams
-                    </li>
+                    <li>Played role of build engineer, provided expertise in CI and deployment practice for other teams</li>
                 </ul>
             </div>
         </div>
@@ -425,7 +440,6 @@
                 <ul>
                     <li>Certified Force.com Developer(Winter'13)</li>
                     <li>Salesforce.com Certified Administrator (Spring'13)</li>
-                    <li><a href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU">Thrailhead Profile</a></li>
                     <li>Belarusian National Technical University (didn't complete full course of Software engineering specialization)</li>
                     <li>Some coursera.org courses in data analysis</li>
                 </ul>

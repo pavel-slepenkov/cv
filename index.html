@@ -17,51 +17,47 @@
           rel="icon" type="image/x-icon">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Spartan:wght@500&display=swap');
 
+        ::selection {
+            color: rgba(5, 0, 48, 0.92);
+            background: rgba(239, 249, 0, 0.22);
+        }
         body {
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: large;
             color: #566b78;
             margin: 0 auto;
             max-width: 100%;
             line-height: 1.5;
+            text-align: justify;
         }
-
         .content-container {
             color: #566b78;
             margin: 0 auto;
             max-width: 60em;
             padding: 0 1em;
         }
-
         a {
             color: #e81c4f;
         }
-
         h1,
         h2,
         strong {
             color: #333;
         }
-
         .company-name {
             font: 24px bold;
             font-family: 'Josefin Sans', sans-serif;
         }
-
         .logos {
             width: 50px;
             height: 50px;
             margin-top: 10px;
         }
-
-        #logoContainer {
-            margin-top: 20%;
-        }
-
         .heading {
-            background: #e4e4e4;
+            background: #e8faff;
+            font-family: 'Spartan', sans-serif;
             height: 75px;
             line-height: 50px;
             font-size: 30px;
@@ -74,7 +70,13 @@
         .heading-container {
             max-width: 60em;
         }
-
+        .group-heading {
+            text-align: center;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
         .section-heading {
             line-height: 50px;
             padding-left: 10px;
@@ -82,11 +84,9 @@
             position: sticky;
             top: 75px;
         }
-
         .heading-name {
             white-space: nowrap;
         }
-
         .heading-on-print {
             display: none !important;
         }
@@ -105,6 +105,9 @@
                 z-index: 5;
                 top: 0;
             }
+            body {
+                font-size: 13px;
+            }
         }
 
         @media (min-width: 601px) and (max-width: 800px) {
@@ -112,7 +115,7 @@
                 z-index: 5;
                 height: 150px;
                 background: #e4e4e4;
-                width: 100%;
+                width: 1000px;
                 padding-top: 10px;
             }
 
@@ -158,9 +161,17 @@
             .heading-on-print {
                 display: block !important;
             }
+            p {
+                page-break-inside: avoid;
+            }
+            html, body {
+                width: 210mm;
+                height: 297mm;
+            }
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108892640-1"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -169,15 +180,19 @@
         gtag('js', new Date());
         gtag('config', 'UA-108892640-1');
     </script>
+
     <script>
         function onloadHandler() {
             document.onkeydown = keyPress;
+
+            console.log("Hi there! I'm excited that you're so interested in my CV that you opened devtools 🍺🍺");
+            console.log("You could contact me much faster with telegram @pavelsl");
         }
 
         function keyPress(e) {
             var evtObj = window.event ? event : e;
             if ((evtObj.ctrlKey || evtObj.metaKey) && evtObj.keyCode === 80) {
-                console.log(" 🦄 Cool! You're decided to print my CV. Seems like we're moving our story to the next level 👍");
+                console.log(" 🦄 Cool! You've decided to print my CV. Seems like we're moving our story to the next level 👍");
                 window.scrollTo(0, 0);
             }
         }
@@ -190,28 +205,26 @@
 
     <div class="heading-container">
         <div class="col-md-1 heading-name">
-            <h1><a href="https://pavelslepenkov.info">🤓 Pavel Slepiankou</a></h1>
-            <!--<h4>Software Engineer</h4>-->
+            <h1><a href="https://pavelslepenkov.info" target="_blank">Pavel Slepiankou</a></h1>
         </div>
 
         <div class="col-md-7"></div>
 
         <div class="col-md-4 profile-links">
-            <a class="profile-link" href="https://www.facebook.com/pavel.slepiankou">
-                <img class="logos" src="assets/facebook-logo-button.svg" alt="">
+
+            <a class="profile-link" href="https://www.linkedin.com/in/pavel-slepiankou-76376b35" target="_blank">
+                <img class="logos" src="assets/iconmonstr-linkedin-5.svg" alt="">
             </a>
-            <a class="profile-link" href="https://www.linkedin.com/in/pavel-slepiankou-76376b35">
-                <img class="logos" src="assets/linkedin-logo-button.svg" alt="">
-            </a>
-            <a class="profile-link" href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU">
+            <a class="profile-link" href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU" target="_blank">
                 <img class="logos" src="assets/trailhead.svg" alt="">
             </a>
-            <a class="profile-link" href="https://stackoverflow.com/users/798335/pavel-slepiankou">
+            <a class="profile-link" href="https://stackoverflow.com/users/798335/pavel-slepiankou" target="_blank">
                 <img class="logos" src="assets/stack-exchange-symbol.svg" alt="">
             </a>
-            <a class="profile-link" href="https://github.com/pavel-slepenkov">
+            <a class="profile-link" href="https://github.com/pavel-slepenkov" target="_blank">
                 <img class="logos" src="assets/github-social-logo.svg" alt="">
             </a>
+
 
         </div>
     </div>
@@ -228,8 +241,6 @@
                     <h1>👨‍💻 Pavel Slepiankou</h1>
                     <h4>Software Engineer</h4>
                 </div>
-                <!--<br/>-->
-                <h2 class="">Curriculum Vitae</h2>
             </div>
         </div>
 
@@ -237,42 +248,87 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    I'm a software developer from Minsk, Belarus.
+                    Hello, I'm a software developer from Minsk, Belarus.
 
-                    My primary specializations are Salesforce.com and Web development.
-                    I have 9 years of professional software development experience and 11 years of overall IT
-                    experience.
-                    Since 2011 I've been working with Salesforce.com/Force.com as a primary platform.
-                    During this period I played developer, key developer, development team leader and solution architect
-                    roles in different projects. But all this time I was a developer who writes code every single day.
-                    I know limitation, patterns and anti-patterns of Force.com
-                    platform. I believe that I made all possible mistakes and caught
-                    all possible exceptions on the platform but I still love it.
+                    My primary specializations are Salesforce.com and data analysis.
+                    I have 10 years of professional software development experience and 12 years of overall IT
+                    experience. With strong knowledge in sales and SaaS sales domain, finances and marketing my skill mix is pretty interesting
+                    and can be useful in any organization which looking toward building new applications, improving internal systems and data integrity,
+                    business intelligence and data literacy.
                 </p>
+
                 <p>
-                    Despite my primary specialization I also have an experience with application development on other
-                    programming language & frameworks, mostly with Java, Python and Javascript.
+                    Since 2011 Salesforce.com is a primary development platform which I use.
+                    During this period I played developer, key developer, team leader and solution architect
+                    roles in different projects and companies. But with all these roles and responsibilities
+                    I still remain a developer who writes code every single day.
+
+                    Within the Salesforce.com I know limitation, patterns and anti-patterns of the platform.
+                    I do believe that I have made all possible mistakes and have caught all possible exceptions on the platform but I still like it.
+                    I'm still a geek who seek for new interesting stuff in computers and networks just for fun.
+
+                </p>
+
+                <p>
+                    Despite my primary specialization I also have wide experience with application development on other
+                    programming languages, frameworks and platforms, mostly with Python and Javascript as well as advanced analytical SQL.
                     I also an active member of StackOverflow/StackExchange community where I answer a
                     programming related questions and help beginners and whoever who needs a help.
                 </p>
 
                 <p>
-                    Currently I work for Targetprocess as a Salesforce.com developer where I automate and improve
-                    internal sales and marketing processes and build a full cycle Quote-to-Cash system.
+                    Currently I work for Targetprocess as a Salesforce developer / BI engineer with deep business involvement. where I automate and improve
+                    internal sales, marketing and financial processes and build a full cycle Quote-to-Cash system.
                 </p>
             </div>
         </div>
         <hr>
 
-        <div class="row">
-            <div class="col-md-3">
-                <h2>WORK EXPERIENCE</h2>
-            </div>
-        </div>
+
+        <!--SKILLS -->
+        <div class="group-heading">🔥 SKILLS 🔥</div>
 
         <div class="row">
-            <div class="col-md-3 section-heading">
-                <h4 class="company-name"><a href="https://targetprocess.com">👨‍🎤 Targetprocess</a></h4>
+            <ul>
+                <li>Full Stack Salesforce development with strong front-end skills</li>
+                <ul>
+                    <li>Apex & VisualForce development since API version 21.0</li>
+                    <li>JavaScript (ES6, Node.js, Lightning Framework, AngularJS, Can.js, Google Visualization, D3)</li>
+                    <li>Lightning Framework</li>
+                    <li>Salesforce APIs</li>
+                    <li>Unit / Integration / UI testing</li>
+                    <ul>
+                        <li>Apex Unit testing</li>
+                        <li>Selenium Web driver (Python / Node.js)</li>
+                        <li>JS testing with Mocha+Chai+Sinon</li>
+                        <li>API tests with Python</li>
+                    </ul>
+                </ul>
+                <li>Salesforce Administration and Security</li>
+                <li>REST / SOAP APIs and testing with curl / postman</li>
+                <li>AppExchange / Managed Packages development</li>
+                <li>PostgreSQL with analytical SQL and data management</li>
+                <li>AWS (EC2, S3, Redshift, Lambda, etc.) / Google Cloud (Cloud compute) / Docker</li>
+                <li>Python</li>
+                <li>HTML / CSS / Bootstrap / Lightning Design System</li>
+                <li>Continuous Integration (Jenkins / TeamCity with Ant Migration tool/Python/Node.js scripting)</li>
+                <li>Data Analysis</li>
+                <li>ETL (Fivetran / Stitchdata / Dataloader / Pentaho DI / custom python tooling)</li>
+                <li>Visualization (Tableau / VizyDrop / Google Data Studio)</li>
+                <li>Documentation (Visio / Miro / Google Drawings / MD wiki)</li>
+                <li>Development team management (up to 15 members) can run it with Jira, physical sticky notes, Targetprocess, Trello or whatever else</li>
+                <li>Deep knowledge in Pardot / Google Analytics / Outreach.io / ScheduleOnce / Docusign / 1C</li>
+                <li>Braintree</li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div class="row group-heading">🛠 WORK EXPERIENCE 🛠</div>
+
+        <div class="row">
+            <div class="col-md-4 section-heading">
+                <h4 class="company-name"><a href="https://targetprocess.com">🧙‍♂️ Targetprocess</a></h4>
                 <p>Nov. 2016 - Present</p>
             </div>
             <div class="col-md-8">
@@ -280,15 +336,18 @@
                     Targetprocess is a visual project management software solution that focuses on the agile software
                     development methodology with out-of-the-box support for Scrum, Kanban and SAFe. I work on improving
                     sales and marketing processes.
+                <hr/>
                 <ul>
-                    <li>Developing custom Quote-to-Cash application on Lightning framework (in-house developed
-                        Steelbrick alternative)
-                    </li>
+
+                    <li>Developing custom Quote-to-Cash application on Lightning framework (in-house developed Steelbrick alternative)</li>
+                    <li>Analyse sales and marketing data and improve processes based on it</li>
+                    <li>Analyse financial data and prepare reports</li>
+                    <li>Building a predictive lead scoring models</li>
                     <li>Integration with 3rd party applications via APIs</li>
                     <li>Improving sales processes by integration a 3rd party applications</li>
                     <li>Sales / Marketing processes automation via triggers / workflows</li>
-                    <li>Building a predictive lead scoring system</li>
-                    <li>Analyse sales data and improve processes based on it</li>
+                    <li>Integrate Salesforce into data pipeline</li>
+
                 </ul>
                 </p>
             </div>
@@ -297,31 +356,30 @@
 
         <!-- EPAM -->
         <div class="row">
-            <div class="col-md-3 section-heading">
-                <h4 class="company-name"><a href="https://epam.com">👨‍🔧 Epam Systems</a></h4>
+            <div class="col-md-4 section-heading">
+                <h4 class="company-name"><a href="https://epam.com">👨‍💻‍ Epam Systems</a></h4>
                 <p>Sept. 2011 - Nov. 2016</p>
             </div>
             <div class="col-md-8">
                 <p>
                     I started work at Epam Systems as a developer and through a different roles like key
-                    developer/consultant/auditor I finished as a lead developer with roles of team leader and solution architect.
-                    I completed ~10 projects for different Epam's customers inculding Coca-Cola, Merk/MSD.
+                    developer, consultant and auditor I finished as a lead developer with roles of team leader and solution architect.
+                    I completed ~10 projects for different Epam's customers.
                     By these projects I gained a solid experience with Sales, Service and Community Clouds as well as other Salesforce related technologies.
                 </p>
-                <p>Also I was a trainer in Salesforce developer's Labs and a leader of local Salesforce developers
-                    community</p>
+                <p>
+                    Also I was a trainer in Salesforce developer's Labs and a leader of local Salesforce developers
+                    community
+                </p>
+                <hr/>
                 <ul>
-                    <li>Managed team on migration VisualForce Salesforce Community Cloud application to Lightning Component</li>
+                    <li>Leaded and managed team on migration VisualForce Salesforce Community Cloud applications to Lightning Component</li>
                     <li>Worked on application which required a complex credit scoring algorithms and wide set of
-                        integration via REST and SOAP with
-                        external credit scoring data providers.
+                        integration via REST and SOAP with external credit scoring data providers.
                     </li>
-                    <li>Performed a security/architecture audit and code reviews for parallel stream projects</li>
+                    <li>Performed a security / architecture audit and code reviews for parallel stream projects</li>
                     <li>Experience with Agile methodologies, leading of sprint planning, retrospective, demos</li>
-                    <li>Organized meetups for Salesforce developers, was a speaker on these meetups</li>
-                    <li>Once I saw and refactored Salesforce org with 95% of used apex code limit. The team which
-                        developed it before knew nothing about version control ¯\_(ツ)_/¯
-                    </li>
+                    <li>Organized internal meetups for Salesforce developers, was a speaker on these meetups</li>
                     <li>Played role of build engineer, provided expertise in CI and deployment practice for other teams</li>
                 </ul>
             </div>
@@ -330,7 +388,7 @@
 
         <!-- BWD -->
         <div class="row">
-            <div class="col-md-3 section-heading">
+            <div class="col-md-4 section-heading">
                 <h4 class="company-name">👨‍💼 BelWillesden</h4>
                 <p>Nov. 2009 - Sept. 2011</p>
             </div>
@@ -340,6 +398,7 @@
                     developer in IT department.
                     I was responsible for new application development, support and integrations with other services.
                 </p>
+                <hr/>
                 <ul>
                     <li>Integration of Lotus Domino Help Desk app with a monitoring system Nagios.</li>
                     <li>Development and support of Electronic Document Management System in part of financial statistics
@@ -354,9 +413,9 @@
         </div>
         <hr>
 
-        <!-- ARMY -->
+        <!-- freelance -->
         <div class="row">
-            <div class="col-md-3 section-heading">
+            <div class="col-md-4 section-heading">
                 <h4 class="company-name">👨‍💻 Freelancer</h4>
                 <p>Mar. 2009 - Nov. 2009</p>
             </div>
@@ -374,13 +433,13 @@
 
         <!-- ARMY -->
         <div class="row">
-            <div class="col-md-3 section-heading">
+            <div class="col-md-4 section-heading">
                 <h4 class="company-name">💂‍♂️ Armed Forces of Belarus</h4>
                 <p>Mar. 2007 - Mar. 2009</p>
             </div>
             <div class="col-md-8">
                 <p>
-                    I worked as a system administrator and telecommunication specialist.
+                    I served as a system administrator and telecommunication specialist.
                 <ul>
                     <li>Configure and maintain Linux servers</li>
                     <li>Manage computer networks</li>
@@ -393,59 +452,53 @@
         </div>
         <hr>
 
-        <!--SKILLS -->
-        <h2 class="section-heading">🔥 SKILLS</h2>
+
+        <!-- CERTIFICATION -->
+        <div class="group-heading">
+            👨‍🎓 Education & Certification
+        </div>
         <div class="row">
-            <div class="col-md-3">
+            <hr>
+            <ul>
+                <li>Certified Force.com Developer(Winter'13)</li>
+                <li>Salesforce.com Certified Administrator (Spring'13)</li>
+                <li>Belarusian National Technical University (didn't complete full course of Software engineering specialization)</li>
+                <li>Some Coursera / Udemy courses in data analysis</li>
+            </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="no-print">
+            <hr>
+            <div>
+                One of the most crucial thing in hiring is to hire not only technically strong candidate but a teammate who would be nice to work with.
+                So, you probably want to check my social networks in order to validate cultural fit. There're some links to my socials
             </div>
-            <div class="col-md-8">
-                <ul>
-                    <li>Full Stack Salesforce development with strong front-end skills</li>
-                    <ul>
-                        <li>Apex</li>
-                        <li>VisualForce</li>
-                        <li>Lightning Framework</li>
-                        <li>Salesforce APIs</li>
-                        <li>Unit/Integration/UI testing</li>
-                        <ul>
-                            <li>Apex Unit tests</li>
-                            <li>Selenium Web driver (python/node.js)</li>
-                            <li>Mocha+Chai+Sinon</li>
-                            <li>API test with python</li>
-                        </ul>
-                    </ul>
-                    <li>Salesforce Administration</li>
-                    <li>JavaScript (ES6, Node.js, Lightning Framework, AngularJS, Can.js, Google Visualization, D3)</li>
-                    <li>REST/SOAP APIs (Integrate nonintegratable, whatever service/software with other one)</li>
-                    <li>AppExchange/Managed Packages development</li>
-                    <li>Python (mostly Web scraping/data transformation and analysis with Pandas)</li>
-                    <li>Continuous Integration (Jenkins/TeamCity with Ant Migration tool/Python/Node.js)</li>
-                    <li>HTML/CSS/Bootstrap/Lightning Design System</li>
-                    <li>Pardot configuration</li>
-                    <li>Google Analytics/Outreach.io/ScheduleOnce/Docusign</li>
-                    <li>AWS/Heroku</li>
-                    <li>ETL tools (Dataloader/Pentaho DI)</li>
-                    <li>Development team management (up to 15 members)</li>
-                </ul>
+            <div class="row" style="text-align: center; padding-top: 1%; padding-bottom: 3%">
+
+                <a href="https://www.goodreads.com/user/show/22682554-pavel" target="_blank">
+                    <img class="logos" style="width: 45px" src="assets/goodreads.svg" alt="">
+                </a>
+                <a href="https://www.facebook.com/pavel.slepiankou" target="_blank">
+                    <img class="logos" src="assets/iconmonstr-facebook-5.svg" alt="">
+                </a>
+                <a href="https://twitter.com/pavelslepenkov" target="_blank">
+                    <img class="logos" src="assets/iconmonstr-twitter-5.svg" alt="">
+                </a>
+
+                <a href="https://www.instagram.com/pavelslp" target="_blank">
+                    <img class="logos" src="assets/iconmonstr-instagram-15.svg" alt="">
+                </a>
+
+            </div>
+
+            <div class="row" style="text-align: center; padding-top: 1%; padding-bottom: 3%">
+                Pavel Slepiankou - CV 2020
             </div>
         </div>
 
-        <!-- CERTIFICATION -->
-        <div class="row">
-            <hr>
-            <div class="col-md-3">
-                <h3>👨‍🎓 Education & Certification</h3>
-            </div>
-            <div class="col-md-8">
-                <ul>
-                    <li>Certified Force.com Developer(Winter'13)</li>
-                    <li>Salesforce.com Certified Administrator (Spring'13)</li>
-                    <li>Belarusian National Technical University (didn't complete full course of Software engineering specialization)</li>
-                    <li>Some coursera.org courses in data analysis</li>
-                </ul>
-            </div>
-        </div>
     </div>
+
 </div>
 </body>
 

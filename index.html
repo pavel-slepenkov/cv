@@ -55,8 +55,11 @@
             height: 50px;
             margin-top: 10px;
         }
+        .goodreads-logo {
+            width: 45px;
+        }
         .heading {
-            background: #e8faff;
+            background: #ffffff;
             font-family: 'Spartan', sans-serif;
             height: 75px;
             line-height: 50px;
@@ -78,7 +81,6 @@
             font-size: 30px;
         }
         .section-heading {
-            line-height: 50px;
             padding-left: 10px;
             position: -webkit-sticky;
             position: sticky;
@@ -96,17 +98,40 @@
         }
 
         @media (max-width: 600px) {
-            .heading {
-                display: none !important;
-            }
-
-            .section-heading {
-                background: #f5f7f9;
-                z-index: 5;
-                top: 0;
-            }
             body {
                 font-size: 13px;
+            }
+            .heading {
+                z-index: 5;
+                height: 80px;
+                font-size: 14px;
+                background: #ffffff;
+                padding-top: 10px;
+            }
+            .heading-name {
+                display: initial;
+            }
+            .profile-links {
+                float: right;
+            }
+            .logos,
+            .goodreads-logo {
+                width: 25px;
+                margin-top: 0px;
+                margin-right: 5px;
+            }
+            .group-heading {
+                font-size: 18px;
+            }
+            .section-heading {
+                background: #ffffff;
+                z-index: 6;
+                top: 0;
+                margin: inherit;
+                line-height: 10px;
+            }
+            .company-name {
+                text-align: center;
             }
         }
 
@@ -120,7 +145,7 @@
             }
 
             .section-heading {
-                background: #f1f9f6;
+                background: #ffffff;
                 z-index:4;
                 top:150px;
                 margin-left: -50px;
@@ -184,8 +209,7 @@
     <script>
         function onloadHandler() {
             document.onkeydown = keyPress;
-
-            console.log("Hi there! I'm excited that you're so interested in my CV that you opened devtools 🍺🍺");
+            console.log("Hi there! I'm excited that you're so interested in my CV that you have opened a devtools 🍺🍺");
             console.log("You could contact me much faster with telegram @pavelsl");
         }
 
@@ -203,32 +227,26 @@
 
 <div class="heading no-print">
 
-    <div class="heading-container">
-        <div class="col-md-1 heading-name">
-            <h1><a href="https://pavelslepenkov.info" target="_blank">Pavel Slepiankou</a></h1>
-        </div>
+    <div class="heading-container heading-name">
+        <a href="https://pavelslepenkov.info" target="_blank">Pavel Slepiankou</a>
 
-        <div class="col-md-7"></div>
+        <a class="profile-link" href="https://www.linkedin.com/in/pavel-slepiankou-76376b35" target="_blank">
+            <img class="logos" src="assets/iconmonstr-linkedin-5.svg" alt="">
+        </a>
 
-        <div class="col-md-4 profile-links">
+        <a class="profile-link" href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU"
+            target="_blank">
+            <img class="logos" src="assets/trailhead.svg" alt="">
+        </a>
 
-            <a class="profile-link" href="https://www.linkedin.com/in/pavel-slepiankou-76376b35" target="_blank">
-                <img class="logos" src="assets/iconmonstr-linkedin-5.svg" alt="">
-            </a>
-            <a class="profile-link" href="https://trailhead.salesforce.com/en/users/profiles/005500000061UsBAAU" target="_blank">
-                <img class="logos" src="assets/trailhead.svg" alt="">
-            </a>
-            <a class="profile-link" href="https://stackoverflow.com/users/798335/pavel-slepiankou" target="_blank">
-                <img class="logos" src="assets/stack-exchange-symbol.svg" alt="">
-            </a>
-            <a class="profile-link" href="https://github.com/pavel-slepenkov" target="_blank">
-                <img class="logos" src="assets/github-social-logo.svg" alt="">
-            </a>
+        <a class="profile-link" href="https://stackoverflow.com/users/798335/pavel-slepiankou" target="_blank">
+            <img class="logos" src="assets/stack-exchange-symbol.svg" alt="">
+        </a>
 
-
-        </div>
+        <a class="profile-link" href="https://github.com/pavel-slepenkov" target="_blank">
+            <img class="logos" src="assets/github-social-logo.svg" alt="">
+        </a>
     </div>
-
 </div>
 
 <div class="container-fluid content-container">
@@ -238,7 +256,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="heading-on-print">
-                    <h1>👨‍💻 Pavel Slepiankou</h1>
+                    <h1>👨‍💻Pavel Slepiankou</h1>
                     <h4>Software Engineer</h4>
                 </div>
             </div>
@@ -266,34 +284,32 @@
                     Within the Salesforce.com I know limitation, patterns and anti-patterns of the platform.
                     I do believe that I have made all possible mistakes and have caught all possible exceptions on the platform but I still like it.
                     I'm still a geek who seek for new interesting stuff in computers and networks just for fun.
-
                 </p>
 
                 <p>
                     Despite my primary specialization I also have wide experience with application development on other
                     programming languages, frameworks and platforms, mostly with Python and Javascript as well as advanced analytical SQL.
-                    I also an active member of StackOverflow/StackExchange community where I answer a
+                    I also an active member of StackOverflow / StackExchange community where I answer a
                     programming related questions and help beginners and whoever who needs a help.
                 </p>
 
                 <p>
-                    Currently I work for Targetprocess as a Salesforce developer / BI engineer with deep business involvement. where I automate and improve
-                    internal sales, marketing and financial processes and build a full cycle Quote-to-Cash system.
+                    Currently I work for Targetprocess as a Salesforce developer / BI engineer with deep business involvement.
+                    My main goal is to automate and improveinternal sales, marketing and financial processes as much as possible.
                 </p>
             </div>
         </div>
         <hr>
 
-
         <!--SKILLS -->
-        <div class="group-heading">🔥 SKILLS 🔥</div>
+        <div class="group-heading">🔥  SKILLS  🔥</div>
 
         <div class="row">
             <ul>
                 <li>Full Stack Salesforce development with strong front-end skills</li>
                 <ul>
-                    <li>Apex & VisualForce development since API version 21.0</li>
-                    <li>JavaScript (ES6, Node.js, Lightning Framework, AngularJS, Can.js, Google Visualization, D3)</li>
+                    <li>Advanced Apex & VisualForce development since API version 21.0</li>
+                    <li>JavaScript (ES6, Node.js, Lightning Framework, AngularJS, Google Visualization, D3)</li>
                     <li>Lightning Framework</li>
                     <li>Salesforce APIs</li>
                     <li>Unit / Integration / UI testing</li>
@@ -303,29 +319,31 @@
                         <li>JS testing with Mocha+Chai+Sinon</li>
                         <li>API tests with Python</li>
                     </ul>
+                    <li>force CLI / sfdx</li>
+                    <li>AppExchange apps configuration and support</li>
+                    <li>Managed Packages development</li>
                 </ul>
                 <li>Salesforce Administration and Security</li>
-                <li>REST / SOAP APIs and testing with curl / postman</li>
-                <li>AppExchange / Managed Packages development</li>
+                <li>REST / SOAP APIs and testing with curl / Postman / Python</li>
                 <li>PostgreSQL with analytical SQL and data management</li>
                 <li>AWS (EC2, S3, Redshift, Lambda, etc.) / Google Cloud (Cloud compute) / Docker</li>
                 <li>Python</li>
                 <li>HTML / CSS / Bootstrap / Lightning Design System</li>
                 <li>Continuous Integration (Jenkins / TeamCity with Ant Migration tool/Python/Node.js scripting)</li>
-                <li>Data Analysis</li>
+                <li>Data Analysis with SQL, Excel, Pandas</li>
                 <li>ETL (Fivetran / Stitchdata / Dataloader / Pentaho DI / custom python tooling)</li>
                 <li>Visualization (Tableau / VizyDrop / Google Data Studio)</li>
                 <li>Documentation (Visio / Miro / Google Drawings / MD wiki)</li>
-                <li>Development team management (up to 15 members) can run it with Jira, physical sticky notes, Targetprocess, Trello or whatever else</li>
+                <li>Development team management (up to 15 members), can run it with Jira, physical sticky notes, Targetprocess, Trello or whatever else</li>
                 <li>Deep knowledge in Pardot / Google Analytics / Outreach.io / ScheduleOnce / Docusign / 1C</li>
                 <li>Braintree</li>
             </ul>
         </div>
-
         <hr/>
 
         <div class="row group-heading">🛠 WORK EXPERIENCE 🛠</div>
 
+        <!-- Targetprocess -->
         <div class="row">
             <div class="col-md-4 section-heading">
                 <h4 class="company-name"><a href="https://targetprocess.com">🧙‍♂️ Targetprocess</a></h4>
@@ -340,13 +358,13 @@
                 <ul>
 
                     <li>Developing custom Quote-to-Cash application on Lightning framework (in-house developed Steelbrick alternative)</li>
-                    <li>Analyse sales and marketing data and improve processes based on it</li>
-                    <li>Analyse financial data and prepare reports</li>
+                    <li>Data analysis of sales and marketing data, metrics creation and improving processes based on it</li>
+                    <li>Financial data analysis and reporting</li>
                     <li>Building a predictive lead scoring models</li>
                     <li>Integration with 3rd party applications via APIs</li>
                     <li>Improving sales processes by integration a 3rd party applications</li>
                     <li>Sales / Marketing processes automation via triggers / workflows</li>
-                    <li>Integrate Salesforce into data pipeline</li>
+                    <li>Integrate Salesforce into data pipeline and ETL related stuff</li>
 
                 </ul>
                 </p>
@@ -373,10 +391,9 @@
                 </p>
                 <hr/>
                 <ul>
+                    <li>Crafting a bunch of code every day</li>
                     <li>Leaded and managed team on migration VisualForce Salesforce Community Cloud applications to Lightning Component</li>
-                    <li>Worked on application which required a complex credit scoring algorithms and wide set of
-                        integration via REST and SOAP with external credit scoring data providers.
-                    </li>
+                    <li>Worked on application which required a complex credit scoring algorithms and wide set of integration via REST and SOAP with external credit scoring data providers.</li>
                     <li>Performed a security / architecture audit and code reviews for parallel stream projects</li>
                     <li>Experience with Agile methodologies, leading of sprint planning, retrospective, demos</li>
                     <li>Organized internal meetups for Salesforce developers, was a speaker on these meetups</li>
@@ -477,17 +494,22 @@
             <div class="row" style="text-align: center; padding-top: 1%; padding-bottom: 3%">
 
                 <a href="https://www.goodreads.com/user/show/22682554-pavel" target="_blank">
-                    <img class="logos" style="width: 45px" src="assets/goodreads.svg" alt="">
+                    <img class="logos goodread-logo" src="assets/goodreads.png" alt="goodreads">
                 </a>
+
+                <a href="https://www.pavelslepenkov.info" target="_blank">
+                    <img class="logos goodread-logo" src="assets/iconmonstr-wordpress-5.svg" alt="blog">
+                </a>
+
                 <a href="https://www.facebook.com/pavel.slepiankou" target="_blank">
-                    <img class="logos" src="assets/iconmonstr-facebook-5.svg" alt="">
+                    <img class="logos" src="assets/iconmonstr-facebook-5.svg" alt="facebook">
                 </a>
                 <a href="https://twitter.com/pavelslepenkov" target="_blank">
-                    <img class="logos" src="assets/iconmonstr-twitter-5.svg" alt="">
+                    <img class="logos" src="assets/iconmonstr-twitter-5.svg" alt="twitter">
                 </a>
 
                 <a href="https://www.instagram.com/pavelslp" target="_blank">
-                    <img class="logos" src="assets/iconmonstr-instagram-15.svg" alt="">
+                    <img class="logos" src="assets/iconmonstr-instagram-15.svg" alt="instagram">
                 </a>
 
             </div>
